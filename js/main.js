@@ -68,7 +68,8 @@ function atualizaElemento(item) {
 function botaoDeleta(id) {
     const elementoBotao = document.createElement('button');
     elementoBotao.innerText = 'X';
-    
+    elementoBotao.classList.add('btn-deletar')
+
     elementoBotao.addEventListener('click', function() {
         deletaElemento(this.parentNode, id);
     });

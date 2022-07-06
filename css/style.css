@@ -1,5 +1,13 @@
-html {
-    background: radial-gradient(farthest-corner at right top,#21A09D, #06182D);
+:root {
+    --cor-fundo: linear-gradient(0deg, rgba(75,21,53,1) 0%, rgba(175,105,97,1) 100%);
+    --cor-botao: #40112D;
+    --cor-texto-botao: ;
+    --cor-principal: #C5965F;
+}
+
+
+html {  
+    background: var(--cor-fundo);
     height: 100%;
     font-family: 'Roboto', cursive;
 }
@@ -18,7 +26,7 @@ html {
     padding: 4em 2em 2em;
     box-sizing: border-box;
     display: flex;
-    background: #C5965F;
+    background: var(--cor-principal);
     border-radius: 10px;
     gap: 2em;
 }
@@ -87,7 +95,7 @@ html {
     margin: 0.5em 0 1em;
     padding: 1em 0.5em;
     border-radius: 10px;
-    border: 2px solid #40112D;
+    border: 2px solid var(--cor-botao);
 }
 
 .adicionar label {
@@ -95,9 +103,27 @@ html {
 }
 
 .cadastrar {
-    background-color: #40112D;
+    background-color: var(--cor-botao);
     color: #FFFFFF;
     cursor: pointer;
+}
+
+.texto{
+    text-align: center;
+}
+
+.texto a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-style: italic;
+    transition: all .2s;
+}
+
+.texto a:hover {
+    color:var(--cor-botao);
+    text-decoration: underline;
 }
 
 .lista {
@@ -119,15 +145,22 @@ html {
     font-size: 20px;
 }
 
-.item strong {
+.item strong, .btn-deletar {
+    border: var(--cor-principal);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
-    Background: #C5965F;
+    Background: var(--cor-principal);
     font-weight: 400;
+}
+
+.btn-deletar:hover {
+    background: var(--cor-botao);
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
